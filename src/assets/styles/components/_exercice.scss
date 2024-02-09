@@ -1,0 +1,57 @@
+.exercice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, .95);
+  color: white;
+
+  &-title {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  &-disc {
+    transition: transform 5s ease, background-color 5s ease;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 2.5rem);
+    top: calc(50% - 2.5rem);
+
+    &--in {
+      background-color: var(--color-first);
+    }
+
+    &--out {
+      background-color: var(--color-second);
+    }
+
+    &--size {
+      &.exercice-disc {
+        &--in {
+          transform: scale(2);
+        }
+    
+        &--out {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &--position {
+      &.exercice-disc {
+        &--in {
+          transform: translateY(-20vh);
+        }
+    
+        &--out {
+          transform: translateY(20vh);
+        }
+      }
+    }
+  }
+}

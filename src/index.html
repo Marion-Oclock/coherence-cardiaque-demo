@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon assistant de cohérence cardiaque</title>
+  <link rel="stylesheet" href="./assets/styles/index.scss">
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Mulish:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <a href="/" class="page-logo">
+        <img src="./assets/img/logo.png" alt="Mon assistant de cohérence cardiaque">
+      </a>
+    </header>
+    <main class="page-content">
+      <div class="page-intro">
+        <h1 class="page-title">Mon assistant de <span class="page-title-emphasis"><span class="page-title-emphasis-gradient">cohérence cardiaque</span></span></h1>
+        <section class="config">
+          <h2 class="config-title">Paramétrer l'exercice</h2>
+          <form id="config">
+            <div class="config-row">
+              <label>
+                <span class="config-legend">Durée</span>
+                <input name="duration" type="range" value="3" min="1" max="5" step="1">
+              </label>
+              <input aria-hidden="true" name="duration-number" type="number" value="3" min="1" max="5" step="1">
+              min
+            </div>
+            <div class="config-row">
+              <label>
+                <span class="config-legend">Temps de respiration (inspiration/expiration)</span>
+                <select name="breath-ratio">
+                  <option>6/4</option>
+                  <option selected>5/5</option>
+                  <option>4/6</option>
+                  <option>3/7</option>
+                </select>
+                secondes
+              </label>
+            </div>
+            <fieldset class="config-row">
+              <legend class="config-legend">Animation</legend>
+              <label><input checked type="radio" name="animation" value="size">Taille</label>
+              <label><input type="radio" name="animation" value="position">Position</label>
+            </fieldset>
+            <fieldset class="config-row">
+              <legend class="config-legend">Bruitage de l'océan</legend>
+              <label><input checked type="checkbox" name="sound" value="1">Activer le son</label>
+            </fieldset>
+            <div class="config-action">
+              <button class="btn">Commencer</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <section class="segment">
+        <h2 class="segment-title">Présentation</h2>
+        <p class="segment-paragraph">Cet assistant va vous permettre de réaliser un exercice de cohérence cardiaque. Cette pratique prometteuse vise à apporter des bienfaits au quotidien en terme d'apaisement, de concentration et de sérénité.</p>
+        <p class="segment-paragraph">Le but est de répéter des cycles de respiration en calant son rythme sur le disque à l'écran. On inspire 5 secondes par le nez puis on expire 5 secondes par la bouche comme si on soufflait dans une paille. L'exercice se réalise de préférence en position assise.</p>
+      </section>
+      <audio class="audio" src="./assets/sound/int.mp3"></audio>
+      <audio class="audio" src="./assets/sound/out.mp3"></audio>
+    </main>
+    <footer class="page-footer">
+      <p>Vous pourrez interrompre l'exercice à tout moment via la touche <kbd>Echap</kbd> du clavier ou en touchant l'écran plus d'une seconde sur support tactile.</p>
+      <p>Activez et désactivez le son via la touche <kbd class="shortcut">S</kbd> du clavier ou en touchant l'écran 2 fois de suite sur support tactile.</p>
+    </footer>
+  </div>
+  <script src="./assets/scripts/app.js" type="module"></script>
+</body>
+</html>

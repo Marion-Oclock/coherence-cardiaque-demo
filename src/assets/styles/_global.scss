@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+select, button {
+  cursor: pointer;
+}
+
+input, select, button, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+html {
+  --color-first: #FCCF55;
+  --color-second: #FFBEBA;
+  --color-text: #335;
+  --gradient: linear-gradient(to left bottom, var(--color-first) 10%, var(--color-second) 80%);
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  color: var(--color-text);
+  background-color: white;
+  background-image: 
+    linear-gradient(-6deg, white 30%,  transparent 30.1%), 
+    var(--gradient);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+a, del, ins {
+	text-decoration: none;
+}
+a {
+	color: inherit;
+}
+
+p {
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  font-family: 'Calistoga', sans-serif;
+  font-weight: normal;
+}

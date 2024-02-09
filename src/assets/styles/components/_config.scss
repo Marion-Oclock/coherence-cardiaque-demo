@@ -1,0 +1,60 @@
+.config {
+  background-color: white;
+  padding: 2rem;
+  border-radius: .5rem;
+  box-shadow: -20px 20px 20px -10px rgba(120, 0, 0, 0.2);
+  font-size: 1.2em;
+
+  &-title {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 2rem;
+  }
+
+  &-action {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  &-row {
+    margin-bottom: 1rem;
+    display: block;
+    padding-bottom: 1rem;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  &-legend {
+    display: block;
+    margin-bottom: .5rem;
+    text-align: left;
+    font-weight: bold;
+
+    &::after {
+      content:"";
+      display: block;
+      width: 2em;
+      border-radius: 3px;
+      height: 5px;
+      background-color: var(--color-first);
+      background-image: var(--gradient);
+      margin: .5rem 0 1rem;
+    }
+  }
+
+  input[type=number], select {
+    margin-right: .25rem;
+    padding: .5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: .25rem;
+  }
+
+  input[type=range] {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  input[type=radio], input[type=checkbox] {
+    margin-right: .5rem;
+  }
+
+}

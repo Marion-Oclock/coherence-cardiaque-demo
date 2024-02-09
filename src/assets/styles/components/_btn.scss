@@ -1,0 +1,14 @@
+.btn {
+  padding: 1rem;
+  background-color: var(--color-text);
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+
+  &:hover {
+    box-shadow: 0 0 3px var(--color-text);
+  }
+}
